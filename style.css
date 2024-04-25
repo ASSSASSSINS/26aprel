@@ -87,6 +87,10 @@ button:active {
   transition: 200ms;
 }
 
+img{
+  width: 100%;
+}
+
 header {
   max-width: 1500px;
   display: flex;
@@ -121,6 +125,7 @@ header {
   background-color: #eff7f2;
   margin: auto;
   padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .div-a > div {
@@ -133,8 +138,7 @@ header {
 }
 
 .div1 {
-  width: 500px;
-  height: 410px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -149,31 +153,24 @@ header {
 }
 
 .div2 {
-  width: 592px;
-  height: 592px;
+  max-width: 592px;
   border-radius: 10px;
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 30px;
   padding: 24px;
 }
 section {
-  width: 512px;
-  height: 160px;
+  max-width: 512px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-article {
-  width: 296px;
-  height: 120px;
+  gap: 30px;
+  
 }
 
 .div-b {
-  width: 1280px;
-  height: 502px;
-  margin: 96px 110px;
+  max-width: 1280px;
+  margin: auto;
 }
 .cont {
   max-width: max-content;
@@ -182,8 +179,7 @@ article {
   text-align: center;
 }
 .div-b section {
-  width: 302px;
-  height: 328px;
+  max-width: 302px;
   display: flex;
   flex-direction: column;
 }
@@ -191,10 +187,14 @@ article {
   margin-bottom: 16px;
 }
 .container {
-  width: 1280px;
-  height: 328px;
+  max-width: 1280px;
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
+}
+
+.thumbnail1 , .thumbnail2{
+  display: flex;
+  gap: 24px;
 }
 
 @media screen and (width <= 1020px) {
@@ -234,5 +234,30 @@ article {
   header {
     align-items: flex-start;
     padding-inline: 30px;
+  }
+}
+
+@media screen and (width < 530px){
+  section{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (width < 1088px) and (width >910px){
+  section{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (width <788px){
+  .thumbnail1 , .thumbnail2 {
+    display: flex;
+    flex-direction: column ;
+  }
+
+  .container{
+    padding-inline: 5%;
   }
 }
